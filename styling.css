@@ -1,0 +1,264 @@
+/* RESET */
+*{
+    margin:0;
+    padding:5px;
+    box-sizing:border-box;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body{
+    animation: slideshow 15s infinite;
+    background: url('sunset.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color: white;
+    padding: 10px;
+}
+
+.header img{
+    width:250px;
+    height:auto;
+}
+
+/* BUTTON */
+.btn{
+    background-color: blue;
+    text-decoration:none;
+    padding:10px;
+    color:white;
+    border-radius:8px;
+    font-weight:500;
+    transition:0.3s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:#00d4ff;
+    color:black;
+}
+
+/* MAIN CONTENT */
+.content{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    width: 80%;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.content .text{
+    flex: 1;
+}
+
+.content .image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content .image img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* LEARNING SECTION */
+.learning{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    width: 60%;
+    color: white;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* LINE / BUTTON ALIGN */
+.line {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:left;
+    text-align:left;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    padding:20px;
+}
+
+.stat-box h2{
+    font-size:50px;
+    margin:0;
+    color:#00d4ff;
+}
+
+.stat-box p{
+    font-size:18px;
+    margin-top:10px;
+    line-height:1.4;
+}
+
+/* COURSES */
+.course-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: white;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.course-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.course-row.show{
+    max-height: 2000px;
+}
+
+.course{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.course img{
+    width:120px;
+    height:auto;
+}
+
+.course p{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* GALLERY */
+.gallery {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+}
+
+.gallery h1{
+    padding: 2px;
+    background: rgba(0,0,0,0.5);
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 10px;
+}
+
+.collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.collage img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.collage img:nth-child(4) {
+    grid-column: span 2;
+}
+
+/* UNITY SECTION */
+.unity{
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.unity h1{
+    margin-bottom: 15px;
+}
+
+.unity p{
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* IMAGE SLIDESHOW */
+.image.slideshow {
+    position: relative;
+    max-width: 300px;
+    height: 150px;
+}
+
+.image.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: slideShow 9s infinite;
+}
+
+.image.slideshow img:nth-child(1) { animation-delay: 0s; }
+.image.slideshow img:nth-child(2) { animation-delay: 3s; }
+.image.slideshow img:nth-child(3) { animation-delay: 6s; }
+
+/* ANIMATIONS */
+@keyframes slideShow {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes slideshow {
+    0%   { background-image: url('sunset.jpg'); }
+    33%  { background-image: url('02.jpg'); }
+    66%  { background-image: url('01.jpg'); }
+    100% { background-image: url('sunset.jpg'); }
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .course-row{
+        grid-template-columns: 1fr;
+    }
+
+    .content{
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSU-MCEST</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <img src="dept-logo-dcje.png" alt="MSU-MCEST Logo">
+            <h1>Welcome to MSU-MCEST</h1>
+            <h2>MSU-Maigo College Of Education Science and Technology</h3>
+        </div>
+
+<div class="content">
+    <div class="text">
+        <h1>Your First Choice for Quality Education</h1>
+        <p>
+            With its education programs consistently achieving a 100% passing rate in the Licensure 
+            Examination for Teachers (LET) and even producing board topnotchers, MSU-MCEST 
+            continues to aim for excellence in instruction, research, and community service. 
+            The campus envisions further expansion into the fields of science, technology, and innovation.
+        </p>
+        <a href="http://msumcest.edu.ph/" class="btn">Learn More!</a>
+    </div>
+
+  <div class="image slideshow">
+    <img src="12.jpg">
+    <img src="16.jpg">
+    <img src="17.jpg">
+</div>
+</div>
+<div class="unity">
+    <h1>Unity in Diversity</h1>
+    <p>
+        At MSU-MCEST, we celebrate the harmony between Muslim and non-Muslim students, 
+        fostering mutual respect, understanding, and cooperation. Our campus is a place 
+        where diversity strengthens community, and everyone is valued regardless of culture 
+        or belief. Together, we build friendships, promote peace, and create a welcoming 
+        environment for all.
+    </p>
+    <img src="15.jpg" alt="Unity" style="width:100%; max-width:400px; border-radius:10px;">
+</div>
+        
+
+        <!-- COURSES / DEPARTMENTS -->
+        <div class="courses">
+            <div class="course-header">
+                <h1>DEPARTMENTS</h1>
+                
+            </div>
+
+            <div class="course-row" id="courseRow">
+                <!-- Example of 8 courses -->
+                <div class="course">
+                    <img src="dept-logo-dhess.png" alt="DHESS Logo">
+                    <p>Department of Humanities, <br>Education, and Social Sciences</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dhess.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-dcs.png" alt="DCS Logo">
+                    <p>Department of Computer Science</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dcs.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-dhm.png" alt="DHM Logo">
+                    <p>Department of Hotel and <br>Restaurant Management</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dhm.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-dit.png" alt="DIT Logo">
+                    <p>Department of <br>Industrial Technology</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dit.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-det.png" alt="DET Logo">
+                    <p>Department of <br>Engineering Technology</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_det.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-dnsm.png" alt="DNSM Logo">
+                    <p>Department of Natural <br>Science and Mathematics</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dnsm.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-dcje.png" alt="DCJE Logo">
+                    <p>Department of Criminal<br> Justice Education</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dcje.php" class="btn">Learn More!</a>
+                </div>
+                <div class="course">
+                    <img src="dept-logo-dsw.png" alt="DSW Logo">
+                    <p>Department of <br>Social Work</p>
+                    <a href="http://msumcest.edu.ph/pages/academics/acad_dept_dsw.php" class="btn">Learn More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="gallery">
+    <h1>Where Learning Meets Fun</h1>
+    <div class="collage">
+        <img src="03.jpg">
+        <img src="04.jpg">
+        <img src="05.jpg">
+        <img src="06.jpg">
+        <img src="07.jpg">
+        <img src="08.jpg">
+        <img src="09.jpg">
+        <img src="10.jpg">
+    </div>
+</div>
+
+    <!-- COUNTER SCRIPT -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 100;
+                if(count < target){
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    </script>
+
+  
+</body>
+</html>
